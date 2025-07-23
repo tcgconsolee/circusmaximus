@@ -41,18 +41,43 @@
         <img src="../static/imgs/brownhoodie.png" alt="">
     </div>
     <div class="hoodieimgs">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>1</div>
+        <div>2</div>
     </div>
     <script src="../static/index.js"></script>
     <script>
+        let hoodie = true;
         document.querySelector('.colors div:nth-child(1)').addEventListener('click', () => {
-            document.querySelector('.hoodie img').src = "../static/imgs/brownhoodie.png"
+            if(hoodie) {
+                document.querySelector('.hoodie img').src = "../static/imgs/brownhoodie.png"
+            } else {
+                document.querySelector('.shopdetails p:nth-child(3)').innerHTML = "Rs. 549"
+                document.querySelector('.shopdetails p:nth-child(4)').innerHTML = "Rs. 349"
+                document.querySelector('.hoodie img').src = "../static/imgs/browntoy.png"
+            }
         })
         document.querySelector('.colors div:nth-child(2)').addEventListener('click', () => {
-            document.querySelector('.hoodie img').src = "../static/imgs/greenhoodie.png"
+            if(hoodie) {
+                document.querySelector('.hoodie img').src = "../static/imgs/greenhoodie.png"
+            } else {
+                document.querySelector('.shopdetails p:nth-child(3)').innerHTML = "Rs. 499"
+                document.querySelector('.shopdetails p:nth-child(4)').innerHTML = "Rs. 299"
+                document.querySelector('.hoodie img').src = "../static/imgs/greentoy.png"
+            }
+        })
+        document.querySelector('.hoodieimgs div:nth-child(1)').addEventListener('click', () => {
+            document.querySelector('.hoodie img').src = "../static/imgs/brownhoodie.png"
+            document.querySelector('.shopdetails p:nth-child(2)').innerHTML = "SCOTTY 1"
+            document.querySelector('.shopdetails p:nth-child(3)').innerHTML = "Rs. 2999"
+            document.querySelector('.shopdetails p:nth-child(4)').innerHTML = "Rs. 1999"
+            hoodie = true;
+        })
+        document.querySelector('.hoodieimgs div:nth-child(2)').addEventListener('click', () => {
+            document.querySelector('.hoodie img').src = "../static/imgs/browntoy.png"
+            document.querySelector('.shopdetails p:nth-child(2)').innerHTML = "SCOTTY 2"
+            document.querySelector('.shopdetails p:nth-child(3)').innerHTML = "Rs. 549"
+            document.querySelector('.shopdetails p:nth-child(4)').innerHTML = "Rs. 349"
+            hoodie = false;
         })
     </script>
     <script src="../static/index.js"></script>
