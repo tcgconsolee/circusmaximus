@@ -1,5 +1,15 @@
 @font-face {
     font-family : "degular"; 
-    src : url("circusmaximus\degularvariable.ttf")
+    src : url("fonts/DegularVariable.ttf");
+
+    font-family: "cactus";
+    src : url("fonts/cactus Jack.ttf"); 
+
+    font-family : "fatkat"; 
+    src : url("fonts/FatKat-nRlnP.otf");
+}
+
+.hello { 
+    font-family: "degular";
 }
 
