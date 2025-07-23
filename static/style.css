@@ -10,6 +10,10 @@
     font-family: "fatkat";
     src: url(./fonts/FatKat-nRlnP.otf);
 }
+body {
+    background: url(./imgs/noise.png);
+    background-size: 30%;
+}
 p {
     margin: 0;
     padding: 0;
