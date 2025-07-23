@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body style="background:#0C0C0c;">
+    <div class="menu" style="top:6em">
+        <img src="../static/imgs/menu.svg" alt="" class = "mclick">
+
+        <div class="menuitem">
+            <a href="login">Login</a>
+            <a href="shop">Shop</a>
+            <a href="event">Event</a>
+            <a href="booking">Booking</a>
+        </div>
+    </div>
+    <div class="offer">
+        <p>SELLING OUT FAST! OFFER ENDS IN 35:09 MINS</p>
+    </div>
+    <div class="shopdetails">
+        <p>TRAVIS SCOTT</p>
+        <p>SCOTTY 1</p>
+
+        <p>Rs. 2999</p>
+        <p>Rs. 1999</p>
+
+        <p>Nodding to Fragment Design’s palette and Travis Scott’s style, the Air Jordan 1 Low Travis Scott Fragment mixes white leather, black overlays, and royal blue accents with a bold reverse Swoosh twist.</p>
+
+        <div class="colors">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="buynow">
+            <p>Buy Now</p>
+        </div>
+    </div>
+    <div class="hoodie">
+        <img src="../static/imgs/brownhoodie.png" alt="">
+    </div>
+    <div class="hoodieimgs">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="../static/index.js"></script>
+    <script>
+        document.querySelector('.colors div:nth-child(1)').addEventListener('click', () => {
+            document.querySelector('.hoodie img').src = "../static/imgs/brownhoodie.png"
+        })
+        document.querySelector('.colors div:nth-child(2)').addEventListener('click', () => {
+            document.querySelector('.hoodie img').src = "../static/imgs/greenhoodie.png"
+        })
+    </script>
+    <script src="../static/index.js"></script>
+</body>
+</html>
