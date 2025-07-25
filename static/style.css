@@ -656,3 +656,14 @@ a {
         height: 0;
     }
 }
+.tbd {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+    text-wrap: nowrap;
+    color: #FF3131;
+    font-family: 'degular';
+    font-weight: 900;
+}

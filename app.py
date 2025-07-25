@@ -9,6 +9,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+app.secret_key = os.urandom(24)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
 db = SQLAlchemy()
  
@@ -64,7 +65,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for("index", logged_in = True, username = current_user.username))
+        return redirect(url_for("index"))
 
 
     if request.method == "POST":
@@ -76,7 +77,7 @@ def login():
     
         if user.password == request.form.get("psw"):
             login_user(user)
-            return redirect(url_for("index", logged_in = True, username = user.username))
+            return redirect(url_for("index"))
     return render_template("login.html")
 
 @app.route("/shop")
@@ -87,8 +88,17 @@ def shop():
 def event():
     return render_template("event.html")
 
-@app.route("/booking")
+@app.route('/booked')
+def booked():
+    return render_template("booked.html")
+
+@app.route("/booking", methods=["GET", "POST"])
 def booking():
+    if not current_user.is_authenticated:
+        return redirect(url_for("login"))
+    if request.method == "POST":
+        if current_user.password == request.form.get("psw"):
+            return redirect(url_for("booked"))
     return render_template("booking.html")
 
 if __name__ == "__main__":
